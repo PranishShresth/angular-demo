@@ -3,10 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MatTable } from '@angular/material/table';
+import { BreakingbadService } from './service/breakingbad.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataTableComponent } from './data-table/data-table.component';
-import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, DataTableComponent],
@@ -14,9 +14,9 @@ import { HttpClient } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClient,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [BreakingbadService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
