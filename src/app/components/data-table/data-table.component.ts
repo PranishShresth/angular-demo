@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { BreakingbadService } from '../service/breakingbad.service';
+import { BreakingbadService } from '../../service/breakingbad.service';
 
 @Component({
   selector: 'app-data-table',

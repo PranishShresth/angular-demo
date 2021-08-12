@@ -1,6 +1,6 @@
 # NgAngularDemo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
+This is an angular project which uses breaking bad api to show table of episodes.
 
 ## Development server
 
