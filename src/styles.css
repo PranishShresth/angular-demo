@@ -12,6 +12,12 @@ body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #eeeeee;
+}
+
+.darkTheme {
+  --backgroundColor: #222831;
+  --textColor: #eeeeee;
 }
 
 .content_wrapper {

@@ -1,8 +1,47 @@
+.nav {
+  width: fit-content;
+}
+
 .header {
-  background-color: #00adb5;
+  background-color: #393e56;
   padding: 20px 0;
   color: #ffffff;
-  font-size: 1.4rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.5em;
   font-weight: 700;
+}
+
+/* Cool CSS animation */
+.nav_title {
+  position: relative;
+  margin: 0;
+  font-size: 2rem;
+  -webkit-text-stroke: 0.1vw #222831;
+  color: #393e56;
+  text-transform: uppercase;
+}
+.nav_title::before {
+  content: "Breaking Bad";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  color: #eeeeee;
+  -webkit-text-stroke: 0vw #222831;
+  overflow: hidden;
+  border-right: 2px solid #00adb5;
+  /* background-color: red; */
+  animation: myanimate 5s linear infinite;
+}
+
+@keyframes myanimate {
+  0%,
+  20%,
+  100% {
+    width: 0%;
+  }
+  70%,
+  80% {
+    width: 100%;
+  }
 }
