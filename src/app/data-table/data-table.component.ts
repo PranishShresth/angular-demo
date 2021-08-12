@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Episode } from '../interface/episode';
 import { BreakingbadService } from '../service/breakingbad.service';
 
@@ -8,13 +9,14 @@ import { BreakingbadService } from '../service/breakingbad.service';
   styleUrls: ['./data-table.component.css'],
 })
 export class DataTableComponent implements OnInit {
-  private allEpisodes: any;
+  allEpisodes: any;
+
+  dataColumns: string[] = ['episode_id', 'title', 'season', 'air_date'];
   constructor(private breakingBadService: BreakingbadService) {}
 
   ngOnInit(): void {
     this.breakingBadService.getEpisodes().subscribe((data) => {
       this.allEpisodes = data;
-      console.log(data);
     });
   }
 }

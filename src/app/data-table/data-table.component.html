@@ -1,1 +1,30 @@
-<p>data-table works!</p>
+<table mat-table [dataSource]="allEpisodes" class="mat-elevation-z8">
+  <ng-container matColumnDef="episode_id">
+    <th mat-header-cell *matHeaderCellDef>Episode</th>
+    <td mat-cell *matCellDef="let element">{{ element.episode }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="title">
+    <th mat-header-cell *matHeaderCellDef>Title</th>
+    <td mat-cell *matCellDef="let element">{{ element.title }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="season">
+    <th mat-header-cell *matHeaderCellDef>Season</th>
+    <td mat-cell *matCellDef="let element">S {{ element.season }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="air_date">
+    <th mat-header-cell *matHeaderCellDef>Airdate</th>
+    <td mat-cell *matCellDef="let element">{{ element.air_date }}</td>
+  </ng-container>
+
+  <!-- <ng-container matColumnDef="characters">
+    <th mat-header-cell *matHeaderCellDef>Characters</th>
+    <td mat-cell *matCellDef="let element">
+      <span *ngFor="let cast of element.characters">{{ cast }}</span>
+    </td>
+  </ng-container> -->
+  <tr mat-header-row *matHeaderRowDef="dataColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: dataColumns"></tr>
+</table>

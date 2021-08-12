@@ -8,7 +8,7 @@ import { Episode } from '../interface/episode';
 export class BreakingbadService {
   constructor(private http: HttpClient) {}
 
-  getEpisodes(): Observable<Episode[]> {
+  getEpisodes() {
     return this.http.get<Episode[]>(
       'https://www.breakingbadapi.com/api/episodes'
     );

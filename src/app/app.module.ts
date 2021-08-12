@@ -7,7 +7,7 @@ import { BreakingbadService } from './service/breakingbad.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DataTableComponent } from './data-table/data-table.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatTable, MatTableModule } from '@angular/material/table';
 @NgModule({
   declarations: [AppComponent, DataTableComponent],
   imports: [
@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    MatTableModule,
   ],
   providers: [BreakingbadService],
   bootstrap: [AppComponent],
